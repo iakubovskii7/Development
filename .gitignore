@@ -31,10 +31,6 @@ ipython_config.py
 # Python egg metadata, regenerated from source files by setuptools.
 /*.egg-info
 
-# Dev and data folders on working branch
-dev/*
-data/*
-notebooks/*
 
 # Metadata
 .DS_Store
