@@ -11,9 +11,33 @@ def make_two_arrays():
     return arr1, arr2
 
 
-def main():
-    arr1, arr2 = make_two_arrays()
-    another_arr = make_big_array()
+def stack_images(iterable, n_pixels):
+    """stack the images in the iterable on a (n_pixel x n_pixel) canvas"""
+
+    canvas = np.zeros((n_pixels,n_pixels))
+
+    for item in iterable:
+        canvas += item
+
+    return canvas
 
 
-main()
+def get_random_image(n_pixels):
+    """create a random 2D image with n_pixels on the side"""
+
+    return np.random.rand(n_pixels, n_pixels)
+
+
+def stack_using_list(n_images, n_pixels):
+    """iterate through a list and stack the objects"""
+
+    iterable = [get_random_image(n_pixels) for _ in range(n_images)]
+    stack_images(iterable, n_pixels)
+
+
+def stack_using_generator(n_images, n_pixels):
+    iterable = (get_random_image(n_pixels) for _ in range(n_images))
+    stack_images(iterable, n_pixels)
+
+
+from parallel import if_prime
