@@ -10,7 +10,7 @@ def get_html(url):
 
 
 def get_all_links(html):
-    soup = BeautifulSoup(html, 'lxml')
+    soup = BeautifulSoup(html)
     tds = soup.find('table', id='currencies-all').find_all('td', class_='currency-name')
     links = []
     for td in tds:

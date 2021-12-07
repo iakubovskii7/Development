@@ -14,7 +14,7 @@ def make_two_arrays():
 def stack_images(iterable, n_pixels):
     """stack the images in the iterable on a (n_pixel x n_pixel) canvas"""
 
-    canvas = np.zeros((n_pixels,n_pixels))
+    canvas = np.zeros((n_pixels, n_pixels))
 
     for item in iterable:
         canvas += item
@@ -38,6 +38,3 @@ def stack_using_list(n_images, n_pixels):
 def stack_using_generator(n_images, n_pixels):
     iterable = (get_random_image(n_pixels) for _ in range(n_images))
     stack_images(iterable, n_pixels)
-
-
-from parallel import if_prime
