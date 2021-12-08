@@ -32,3 +32,4 @@ def download_all_sites(sites):
 def download_all_sites_concur(sites):
   with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
     executor.map(download_site, sites)
+
