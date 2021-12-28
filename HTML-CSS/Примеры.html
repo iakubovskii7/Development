@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Моя первая HTML страница</title>
@@ -31,5 +31,49 @@
 <p align="center"> Этот текст выровнен по центру </p>
 <hr width="50px" />
 <hr width="50%" />
+
+<table border="5">
+   <tr>
+      <td> Первый элемент</td>
+      <td> Второй элемент </td>
+      <td>Третий элемент </td>
+   </tr>
+    <tr>
+        <td> Вторая строка-1 </td>
+        <td> Вторая строка-2 </td>
+        <td> Вторая строка-3 </td>
+    </tr>
+
+</table>
+
+<p> <a href="https://google.com"> Cсылка на гугл </a> </p>
+
+<h3> Введите логин и пароль </h3>
+<form>
+    <input type="text" name="username" />  <br/>
+    <input type="password" name="password" />
+</form>
+
+<h3> Выберите языки программирования </h3>
+<form>
+<input type="checkbox" name="language" value="Python" /> Python <br/>
+<input type="checkbox" name="language" value="Ruby"> Ruby <br/>
+    <input type="checkbox" name="language" value="С++"> С++ <br/>
+</form>
+
+<h3> Выберите опыт работы </h3>
+<form>
+<input type="radio" name="language" value="Менее 1 года" /> Менее 1 года
+<input type="radio" name="language" value="1-3 года " /> 1-3 года
+    <input type="radio" name="language" value="Более 3-х лет " /> 1-3 года
+</form>
+
+<h3>Как ваз зовут?</h3>
+<form method="POST" action="#">
+<input type="text" name="name" >
+<input type="submit" name="submit">
+</form>
+
+
 </body>
 </html>
