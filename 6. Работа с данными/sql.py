@@ -1,5 +1,6 @@
 import sqlite3
-
+from sqlalchemy import create_engine
+import pandas as pd
 
 def create_connection_sqlite():
     """ create a database connection to a database that resides
@@ -12,3 +13,11 @@ def create_connection_sqlite():
     except sqlite3.Error as e:
         print(e)
     return conn
+
+
+def sql_query(query,
+              dbname='dvdrental', user='postgres', password='postgres',
+              host='localhost', port=5432):
+    engine = create_engine(f"postgresql+psycopg2://{user}:{password}@{host}:{port}/{dbname}")
+    df = pd.read_sql(query, engine)
+    return df
