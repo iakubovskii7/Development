@@ -21,3 +21,16 @@ def sql_query(query,
     engine = create_engine(f"postgresql+psycopg2://{user}:{password}@{host}:{port}/{dbname}")
     df = pd.read_sql(query, engine)
     return df
+
+
+def exec_sql(sql, connection):
+    try:
+        cur = connection.cursor()
+        cur.execute(sql)
+        connection.commit()
+    except Exception as e:
+        print(e)
+        connection.rollback()
+    return
+
+
