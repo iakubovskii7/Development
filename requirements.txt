@@ -6,3 +6,6 @@ bs4==0.0.1
 psycopg2==2.9.3
 selenium==4.1.0
 sqlalchemy==1.4.31
+uvicorn==0.17.5
+fastapi==0.75.0
+
