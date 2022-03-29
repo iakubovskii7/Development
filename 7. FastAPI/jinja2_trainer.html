@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>This is Jinja2 trainer</title>
+</head>
+<body>
+{{13 + 13}}
+
+{% set name = "Igor" %}
+<p> {% for item in range(5) %}Hello {{ name }}! {% endfor %} </p>
+
+<p>{{data|safe}}</p>
+
+{% if bookmarks %} <p>User has some bookmarks</p> {% endif %}
+
+{% set bookmarks = True %}
+{% if bookmarks %} <p>User has some bookmarks</p> {% endif %}
+
+</body>
+</html>
+
